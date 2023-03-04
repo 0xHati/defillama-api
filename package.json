@@ -1,0 +1,31 @@
+{
+  "name": "defillama-api",
+  "version": "1.0.0",
+  "description": "A wrapper around the Defillama API",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "mocha --timeout 10000 test/**/*.js"
+  },
+  "author": "0xHati",
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^4.3.7",
+    "mocha": "^10.2.0"
+  },
+  "type": "module",
+  "keywords": [
+    "defillama",
+    "api",
+    "blockchain",
+    "ethereum",
+    "crypto"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Hati0x/defillama-api.git"
+  },
+  "homepage": "https://github.com/Hati0x/defillama-api/#readme",
+  "bugs": {
+    "url": "https://github.com/Hati0x/defillama-api/issues"
+  }
+}
