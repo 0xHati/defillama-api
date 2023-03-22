@@ -24,7 +24,7 @@ const data = await response.json();
 
 ## API overview
 
-The defillama api consist of different categories. Each of these categories can be acccessed with their matching name.
+The defillama api consists of different categories. Each of these categories can be acccessed with their matching name.
 
 ### Categories
 
@@ -107,6 +107,5 @@ Defillama is shipping fast and things will change, if you see new or changed thi
 
 Other things that need to happen:
 
-- [ ] Automated jsdocs generation and link to it from this file.
-- [ ] Add github hooks to automate eslint, prettier and run tests before commit.
+- [ ] Add CI.
 - [ ] If needed, more tests.

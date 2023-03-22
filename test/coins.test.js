@@ -40,10 +40,20 @@ describe("coins", function () {
   });
   describe("batchHistorical", function () {
     before(function (done) {
-      done();
+      const coins = [
+        { "ethereum:0xdF574c24545E5FfEcb9a659c229253D4111d87e1": [1672755258, 1672785258] },
+        { "bsc:0x762539b45a1dcce3d36d080f74d1aed37844b878": [1672755258, 1672785258] },
+      ];
+
+      const params = { coins: JSON.stringify(coins), searchWidth: "6h" };
+
+      deffillama.coins.batchHistorical(params).then((response) => {
+        this.data = response;
+        done();
+      });
     });
 
-    // shouldBeValidRequest();
+    shouldBeValidRequest();
   });
 
   describe("chart", function () {
