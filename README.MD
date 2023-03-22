@@ -52,9 +52,10 @@ The defillama api consists of different categories. Each of these categories can
 
 #### coins
 
-- `defillama.coins.pricesCurrent()` - /protocols
-- `defillama.coins.pricesFirst(protocol)` - /protocols/{protocol}
-- `defillama.coins.pricesHistorical(protocol)` - /tvl/{protocol}
+- `defillama.coins.pricesCurrent()` -  /prices/current/{coins}
+- `defillama.coins.pricesFirst(protocol)` - /prices/first/{coins}
+- `defillama.coins.pricesHistorical(protocol)` - /prices/historical/{timestamp}/{coins}
+- `defillama.coins.batchHistorical` - /batchHistorical
 - `defillama.coins.chart()` - /v2/historicalChainTvl
 - `defillama.coins.percentage(chain)` - /v2/historicalChainTvl/{chain}
 - `defillama.coins.block()` - /charts
