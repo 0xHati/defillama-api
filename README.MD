@@ -41,24 +41,30 @@ The defillama api consists of different categories. Each of these categories can
 
 #### TVL
 
-- `defillama.tvl.protocols()` - /protocols
-- `defillama.tvl.protocol(protocol)` - /protocols/{protocol}
-- `defillama.tvl.current(protocol)` - /tvl/{protocol}
-- `defillama.tvl.chainsHistorical()` - /v2/historicalChainTvl
-- `defillama.tvl.chainHistorical(chain)` - /v2/historicalChainTvl/{chain}
-- `defillama.tvl.charts()` - /charts
-- `defillama.tvl.chainCharts(chain)` - /charts/{chain}
-- `defillama.tvl.chains()` - /chains
+| Category   |      Method      |  Endpoint |
+|:----------:|-----------------|-----------|
+|TVL         |`defillama.tvl.protocols()` | /protocols |
+|TVL         |`defillama.tvl.protocol(protocol)` | /protocols/{protocol} |
+|TVL         |`defillama.tvl.current(protocol) | /tvl/{protocol} |
+|TVL         |`defillama.tvl.chainsHistorical()` | /v2/historicalChainTvl |
+|TVL         |`defillama.tvl.chainHistorical(chain)` | /v2/historicalChainTvl/{chain} |
+|TVL         |`defillama.tvl.charts()` | /charts |
+|TVL         |`defillama.tvl.chainCharts(chain)` | /charts/{chain} |
+|TVL         |`defillama.tvl.chains()` | /chains |
+|coins         |`defillama.coins.pricesCurrent()` | /prices/current/{coins} |
+|coins         |`defillama.coins.pricesFirst(protocol)` | /prices/first/{coins} |
+|coins         |`defillama.coins.pricesHistorical(protocol)` | /prices/historical/{timestamp}/{coins}|
+|coins         |`defillama.coins.batchHistorical` | /batchHistorical |
+|coins         |`defillama.coins.chart()` | /chart/{coins} |
+|coins         |`defillama.coins.percentage(chain)` | /percentage/{coins} |
+|coins         |`defillama.coins.block()` | /block/{chain}{timestamp} |
 
-#### coins
 
-- `defillama.coins.pricesCurrent()` -  /prices/current/{coins}
-- `defillama.coins.pricesFirst(protocol)` - /prices/first/{coins}
-- `defillama.coins.pricesHistorical(protocol)` - /prices/historical/{timestamp}/{coins}
-- `defillama.coins.batchHistorical` - /batchHistorical
-- `defillama.coins.chart()` - /v2/historicalChainTvl
-- `defillama.coins.percentage(chain)` - /v2/historicalChainTvl/{chain}
-- `defillama.coins.block()` - /charts
+
+
+
+
+
 
 #### stablecoins
 
