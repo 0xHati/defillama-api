@@ -1,6 +1,6 @@
 # Defillama API
 
-A javascript wrapper around the defillama api. Complete with docs and tests.
+A javascript wrapper around the defillama api.
 
 ## Install
 
@@ -28,79 +28,97 @@ The defillama api consists of different categories. Each of these categories can
 
 ### Categories
 
-- TVL
-- coins
-- stablecoins
-- yields
-- abi-decoder
-- bridges
-- volumes
-- fees and revenue
+- [TVL](#tvl)
+- [coins](#coins)
+- [stablecoins](stablecoins)
+- [yields](#yields)
+- [abi-decoder](#abi-decoder)
+- [bridges](#bridges)
+- [volumes](#volumes)
+- [fees and revenue](#fees-and-revenue)
 
-### Mapping
+### Overview
 
 #### TVL
 
-- `defillama.tvl.protocols()` - /protocols
-- `defillama.tvl.protocol(protocol)` - /protocols/{protocol}
-- `defillama.tvl.current(protocol)` - /tvl/{protocol}
-- `defillama.tvl.chainsHistorical()` - /v2/historicalChainTvl
-- `defillama.tvl.chainHistorical(chain)` - /v2/historicalChainTvl/{chain}
-- `defillama.tvl.charts()` - /charts
-- `defillama.tvl.chainCharts(chain)` - /charts/{chain}
-- `defillama.tvl.chains()` - /chains
+| Category   |      Method      |  Endpoint |
+|:----------:|-----------------|-----------|
+|TVL         |`defillama.tvl.protocols()` | /protocols |
+|TVL         |`defillama.tvl.protocol(protocol)` | /protocols/{protocol} |
+|TVL         |`defillama.tvl.current(protocol)` | /tvl/{protocol} |
+|TVL         |`defillama.tvl.chainsHistorical()` | /v2/historicalChainTvl |
+|TVL         |`defillama.tvl.chainHistorical(chain)` | /v2/historicalChainTvl/{chain} |
+|TVL         |`defillama.tvl.charts()` | /charts |
+|TVL         |`defillama.tvl.chainCharts(chain)` | /charts/{chain} |
+|TVL         |`defillama.tvl.chains()` | /chains |
 
 #### coins
 
-- `defillama.coins.pricesCurrent()` -  /prices/current/{coins}
-- `defillama.coins.pricesFirst(protocol)` - /prices/first/{coins}
-- `defillama.coins.pricesHistorical(protocol)` - /prices/historical/{timestamp}/{coins}
-- `defillama.coins.batchHistorical` - /batchHistorical
-- `defillama.coins.chart()` - /v2/historicalChainTvl
-- `defillama.coins.percentage(chain)` - /v2/historicalChainTvl/{chain}
-- `defillama.coins.block()` - /charts
+| Category   |      Method      |  Endpoint |
+|:----------:|-----------------|-----------|
+|coins         |`defillama.coins.pricesCurrent()` | /prices/current/{coins} |
+|coins         |`defillama.coins.pricesFirst(protocol)` | /prices/first/{coins} |
+|coins         |`defillama.coins.pricesHistorical(protocol)` | /prices/historical/{timestamp}/{coins}|
+|coins         |`defillama.coins.batchHistorical` | /batchHistorical |
+|coins         |`defillama.coins.chart()` | /chart/{coins} |
+|coins         |`defillama.coins.percentage(chain)` | /percentage/{coins} |
+|coins         |`defillama.coins.block()` | /block/{chain}{timestamp} |
 
 #### stablecoins
 
-- `defillama.stablecoins.all(params)` - /stablecoins
-- `defillama.stablecoins.chartAll(params)` - /stablecoincharts/all
-- `defillama.stablecoins.historyChain(chain, params)` - /stablecoincharts/{chain}
-- `defillama.stablecoins.historyAsset(stablecoinId)` - /stablecoin/{stablecoinId}
-- `defillama.stablecoins.overviewChains(chain)` - /stablecoinchains
-- `defillama.stablecoins.historyPrices()` - /stablecoinprices
+| Category   |      Method      |  Endpoint |
+|:----------:|-----------------|-----------|
+|stablecoins         |`defillama.stablecoins.all(params)` | /stablecoins |
+|stablecoins         |`defillama.stablecoins.chartAll(params)` | /stablecoincharts/all |
+|stablecoins         |`defillama.stablecoins.historyChain(chain, params)` | /stablecoincharts/{chain} |
+|stablecoins         |`defillama.stablecoins.historyAsset(stablecoinId)` | /stablecoin/{stablecoinId} |
+|stablecoins         |`defillama.stablecoins.overviewChains(chain)` | /stablecoinchains |
+|stablecoins         |`defillama.stablecoins.historyPrices()` | /stablecoinprices |
 
 #### yields
 
-- `defillama.yields.pools()` - /pools
-- `defillama.yields.chartPool(pool)` - /chart/{pool}
+| Category   |      Method      |  Endpoint |
+|:----------:|-----------------|-----------|
+|yields         |`defillama.yields.pools()` | /pools |
+|yields         |`defillama.yields.chartPool(pool)` | /chart/{pool}|
 
 #### abi-decoder
 
-- `defillama.abiDecoder.getABI(params)` - /fetch/signature
-- `defillama.abiDecoder.getVerboseABI(chain, address, params)` - /fetch/contract/{chain}/{address}
+| Category   |      Method      |  Endpoint |
+|:----------:|-----------------|-----------|
+|abi-decoder         |`defillama.abiDecoder.getABI(params)` | /fetch/signature|
+|abi-decoder          |`defillama.abiDecoder.getVerboseABI(chain, address, params)` | /fetch/contract/{chain}/{address}|
 
 #### bridges
 
-- `defillama.bridges.all(params)` - /bridges
-- `defillama.bridges.summary(bridgeId)` - /bridge/{bridgeId}
-- `defillama.bridges.historyVolume(chain, params)` - /bridgevolume/{chain}
-- `defillama.bridges.statsDay(timestamp, chain, params)` - /bridgedaystats/{timestamp}/{chain}
-- `defillama.bridges.transactions(id, params)` - /transactions/{id}
+| Category   |      Method      |  Endpoint |
+|:----------:|-----------------|-----------|
+|bridges        |`defillama.bridges.all(params)` | /bridges|
+|bridges        |`defillama.bridges.summary(bridgeId)` |  /bridge/{bridgeId}|
+|bridges        |`defillama.bridges.historyVolume(chain, params)` | /bridgevolume/{chain}|
+|bridges        |`defillama.bridges.statsDay(timestamp, chain, params)` | /bridgedaystats/{timestamp}/{chain}|
+|bridges        |`defillama.bridges.transactions(id, params)` |  /transactions/{id}|
 
 #### volumes
 
-- `defillama.volumes.dexsAll(params)` - /overview/dexs
-- `defillama.volumes.dexsChain(chain, params)` - /overview/dexs/{chain}
-- `defillama.volumes.dexsProtocol(protocol, params)` - /summary/dexs/{protocol}
-- `defillama.volumes.dexsOptions(params)` - /overview/options
-- `defillama.volumes.dexsOptionsChain(chain, params)` - /overview/options/{chain}
-- `defillama.volumes.dexsOptionsProtocol(protocol, params)` - /summary/options/{protocol}
+| Category   |      Method      |  Endpoint |
+|:----------:|-----------------|-----------|
+|volumes        |`defillama.volumes.dexsAll(params)` |  /overview/dexs|
+|volumes        |`defillama.volumes.dexsChain(chain, params)` |  /overview/dexs/{chain}|
+|volumes        |`defillama.volumes.dexsProtocol(protocol, params)` |  /summary/dexs/{protocol}|
+|volumes        |`defillama.volumes.dexsOptions(params)` |  /overview/options|
+|volumes        |`defillama.volumes.dexsOptionsChain(chain, params)` |  /overview/options/{chain}|
+|volumes        |`defillama.volumes.dexsOptionsProtocol(protocol, params)` |  /summary/options/{protocol}|
 
-#### fees and revenue
+#### fees and revenue    
 
-- `defillama.feesRevenue.all(params)` - /overview/fees
-- `defillama.feesRevenue.chain(chain, params)` - /overview/fees/{chain}
-- `defillama.feesRevenue.protocol(protocol, params)` - /summary/fees/{protocol}
+| Category   |      Method      |  Endpoint |
+|:----------:|-----------------|-----------|
+|fees and revenue        |`defillama.feesRevenue.all(params)` |  /summary/options/{protocol}|
+|fees and revenue        |`defillama.feesRevenue.chain(chain, params)` |  /overview/fees/{chain}|
+|fees and revenue        |`defillama.feesRevenue.protocol(protocol, params)` |  /summary/fees/{protocol}|
+
+
 
 ## Contributing
 
